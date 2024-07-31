@@ -1,0 +1,20 @@
+Ejecutar
+1. Construir c=los proyectos
+2. Crear las imagenes dentro del microservicio app-authors/books
+docker build -t domeviz/app_books .
+3. Ejecutar en la consola desde app-traefik
+minikube start
+Esperar a que se ejecute el minikube
+4. Ejecutar en la consola desde app-traefik
+octant
+El octant es para visualizar
+Para los yml se puede usar este comando
+kubectl apply -f nombre_archivo.yml
+O entrar a Workloads -> Pods
+y poner apply YML y pegar el yml de cada microservicio
+5. Dentro de octant entrar a Discovery and Load Balancing -> Services
+Escoger el service
+Clic en START PORT FORWARD
+6. Entrar al localhost y poner /books o /authors
+7. Para eliminar todos los contenedores ejecutar
+minikube delete
